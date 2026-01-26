@@ -21,10 +21,11 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        # This uses your requirements.txt to install NumPy and Matplotlib
+        # Force install the core libraries needed for the actuator model
+        pip install numpy matplotlib
+        # Also try installing from requirements.txt if it exists
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
     - name: Run Actuator Simulation
       run: |
-        # This executes your test script to ensure there are no RuntimeErrors
         python simulation.py
