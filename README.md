@@ -29,4 +29,11 @@ $$\ddot{y} = -2 \cdot \zeta \cdot \omega_0 \cdot \dot{y} + \omega_0^2(y_c - y)$$
 ## 🛠️ Installation & Usage
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/hunkarsuci/Hydraulic-Servo-Actuator-Dynamics.git](https://github.com/hunkarsuci/Hydraulic-Servo-Actuator-Dynamics.git)
+   git clone https://github.com/hunkarsuci/Hydraulic-Servo-Actuator-Dynamics.git
+2. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+3. **Run the simulation:**
+   ```bash
+   python simulation.py
+   
