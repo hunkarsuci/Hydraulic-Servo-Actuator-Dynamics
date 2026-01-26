@@ -1,0 +1,5 @@
+# Math and Array processing
+numpy>=1.21.0
+
+# Plotting and Data Visualization
+matplotlib>=3.4.0
