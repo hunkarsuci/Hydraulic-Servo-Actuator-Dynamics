@@ -1,4 +1,11 @@
 # Hydraulic-Servo Actuator Dynamics
+![CI Status](https://github.com/hunkarsuci/Hydraulic-Servo-Actuator-Dynamics/actions/workflows/python-app.yml/badge.svg)
+
+## Continuous Integration (CI)
+This repository uses **GitHub Actions** to ensure code reliability. Every push or pull request triggers an automated pipeline that:
+* Sets up a **Python 3.10** virtual environment.
+* Installs dependencies via `requirements.txt`.
+* Executes `simulation.py` to verify that the actuator model and non-linear logic run without runtime errors.
 
 A high-fidelity **2nd-order State Space model** implemented in Python, simulating a commercial aircraft hydraulic-servo actuator. This project models the dynamic response of flight control surfaces while accounting for critical physical, non-linear constraints.
 
@@ -36,4 +43,6 @@ $$\ddot{y} = -2 \cdot \zeta \cdot \omega_0 \cdot \dot{y} + \omega_0^2(y_c - y)$$
 3. **Run the simulation:**
    ```bash
    python simulation.py
+
+
    
