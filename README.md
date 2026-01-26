@@ -43,6 +43,3 @@ $$\ddot{y} = -2 \cdot \zeta \cdot \omega_0 \cdot \dot{y} + \omega_0^2(y_c - y)$$
 3. **Run the simulation:**
    ```bash
    python simulation.py
-
-
-   
