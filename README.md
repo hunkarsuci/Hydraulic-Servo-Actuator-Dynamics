@@ -26,7 +26,7 @@ $$\dot{x}_2 = -\omega_0^2 \cdot x_1 - 2 \cdot \zeta \cdot \omega_0 \cdot x_2 + \
 The core dynamics are governed by the 2nd-order ODE:
 $$\ddot{y} = -2 \cdot \zeta \cdot \omega_0 \cdot \dot{y} + \omega_0^2(y_c - y)$$
 
-## 🛠️ Installation & Usage
+## Installation & Usage
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/hunkarsuci/Hydraulic-Servo-Actuator-Dynamics.git
