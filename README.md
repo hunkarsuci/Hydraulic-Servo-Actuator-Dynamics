@@ -10,7 +10,7 @@ The behavior of flight control actuators is fundamentally a 2nd-order system. Th
 
 
 
-## 📐 Mathematical Model
+## Mathematical Model
 The model utilizes a linear state-space representation as a baseline:
 
 $$\dot{x}_1 = x_2$$
