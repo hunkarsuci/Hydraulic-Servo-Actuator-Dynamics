@@ -6,6 +6,8 @@ A Python-based simulation of a simplified **hydraulic-servo actuator** used in a
 
 The project models the dynamic response of a second-order actuator while accounting for important nonlinear physical constraints such as acceleration saturation, rate limiting, and maximum deflection limits.
 
+![Hydraulic-servo actuator animation](docs/actuator_animation.gif)
+
 > This repository is intended for educational, research, and portfolio purposes. It is not a certified actuator model and must not be used for real aircraft operation, safety-critical control, or certification work.
 
 ---
@@ -148,6 +150,8 @@ Hydraulic-Servo-Actuator-Dynamics/
 │
 ├── actuator_model.py
 ├── animate_actuator.py
+├── docs/
+│   └── actuator_animation.gif
 ├── simulation.py
 ├── requirements.txt
 ├── LICENSE
