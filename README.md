@@ -20,6 +20,7 @@ The simulation includes:
 
 - Second-order actuator dynamics
 - Commanded vs. actual deflection response
+- Python animation of actuator motion and time response
 - Acceleration / moment saturation
 - Adjustment-rate saturation
 - Position / deflection saturation
@@ -146,6 +147,7 @@ Hydraulic-Servo-Actuator-Dynamics/
 │       └── python-app.yml
 │
 ├── actuator_model.py
+├── animate_actuator.py
 ├── simulation.py
 ├── requirements.txt
 ├── LICENSE
@@ -176,6 +178,29 @@ python simulation.py
 ```
 
 The script runs the actuator response simulation and visualizes the commanded and actual actuator deflection over time.
+
+Run the actuator animation:
+
+```bash
+python animate_actuator.py
+```
+
+The animation shows two synchronized views:
+
+- a simplified actuator piston moving toward the commanded deflection
+- a time-history plot comparing commanded and actual deflection
+
+Export the animation as a GIF:
+
+```bash
+python animate_actuator.py --save actuator_animation.gif --no-show
+```
+
+Useful options:
+
+```bash
+python animate_actuator.py --command 20 --duration 0.5 --fps 30
+```
 
 ---
 
@@ -242,6 +267,7 @@ Implemented:
 - Rate saturation
 - Position saturation
 - Time-domain simulation
+- Python-based actuator animation
 - GitHub Actions CI workflow
 
 Not currently implemented:
@@ -283,6 +309,7 @@ The project uses:
 - Python
 - NumPy
 - Matplotlib
+- Pillow
 
 ---
 
