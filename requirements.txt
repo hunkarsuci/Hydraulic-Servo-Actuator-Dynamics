@@ -6,3 +6,6 @@ matplotlib>=3.4.0
 
 # GIF export for Matplotlib animations
 pillow>=8.0.0
+
+# Test runner
+pytest>=7.0.0

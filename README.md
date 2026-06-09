@@ -1,6 +1,11 @@
 # Hydraulic-Servo Actuator Dynamics
 
 ![CI Status](https://github.com/hunkarsuci/Hydraulic-Servo-Actuator-Dynamics/actions/workflows/python-app.yml/badge.svg)
+![Python](https://img.shields.io/badge/python-3.10%2B-blue)
+![Tests](https://img.shields.io/badge/tests-pytest-brightgreen)
+![NumPy](https://img.shields.io/badge/NumPy-supported-4dabcf)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-visualization-orange)
+![License](https://img.shields.io/badge/license-MIT-green)
 
 A Python-based simulation of a simplified **hydraulic-servo actuator** used in aircraft flight-control applications.
 
@@ -216,6 +221,7 @@ On every push or pull request, the workflow:
 
 - sets up a Python environment
 - installs dependencies from `requirements.txt`
+- runs the pytest test suite
 - executes `simulation.py`
 - verifies that the actuator model runs without runtime errors
 
