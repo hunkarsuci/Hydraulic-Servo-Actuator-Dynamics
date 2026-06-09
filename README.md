@@ -197,13 +197,13 @@ The animation shows two synchronized views:
 Export the animation as a GIF:
 
 ```bash
-python animate_actuator.py --save actuator_animation.gif --no-show
+python animate_actuator.py --save actuator_animation.gif --no-show --playback-speed 0.25
 ```
 
 Useful options:
 
 ```bash
-python animate_actuator.py --command 20 --duration 0.5 --fps 30
+python animate_actuator.py --command 20 --duration 0.5 --fps 30 --playback-speed 0.25
 ```
 
 ---

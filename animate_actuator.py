@@ -22,7 +22,7 @@ def simulate_response(command_value, duration, dt):
     return time, deflection, rate, actuator.max_deflection
 
 
-def build_animation(time, deflection, rate, command_value, max_deflection, fps):
+def build_animation(time, deflection, rate, command_value, max_deflection, fps, playback_speed):
     fig, (ax_mech, ax_plot) = plt.subplots(
         1,
         2,
@@ -92,7 +92,7 @@ def build_animation(time, deflection, rate, command_value, max_deflection, fps):
     current_point, = ax_plot.plot([], [], "o", color="#2f6f73", markersize=6)
     ax_plot.legend(loc="lower right")
 
-    frame_step = max(1, int(round(1.0 / (fps * (time[1] - time[0])))))
+    frame_step = max(1, int(round(playback_speed / (fps * (time[1] - time[0])))))
     frames = range(0, len(time), frame_step)
 
     def update(frame):
@@ -130,6 +130,12 @@ def parse_args():
     parser.add_argument("--duration", type=float, default=0.5, help="Simulation duration in seconds.")
     parser.add_argument("--dt", type=float, default=0.001, help="Simulation time step in seconds.")
     parser.add_argument("--fps", type=int, default=30, help="Animation frames per second.")
+    parser.add_argument(
+        "--playback-speed",
+        type=float,
+        default=1.0,
+        help="Playback speed multiplier. Use 0.25 for quarter-speed slow motion.",
+    )
     parser.add_argument("--save", type=Path, help="Optional output path, for example actuator_animation.gif.")
     parser.add_argument("--no-show", action="store_true", help="Do not open an interactive Matplotlib window.")
     return parser.parse_args()
@@ -138,7 +144,15 @@ def parse_args():
 def main():
     args = parse_args()
     time, deflection, rate, max_deflection = simulate_response(args.command, args.duration, args.dt)
-    fig, animation = build_animation(time, deflection, rate, args.command, max_deflection, args.fps)
+    fig, animation = build_animation(
+        time,
+        deflection,
+        rate,
+        args.command,
+        max_deflection,
+        args.fps,
+        args.playback_speed,
+    )
 
     if args.save:
         args.save.parent.mkdir(parents=True, exist_ok=True)
