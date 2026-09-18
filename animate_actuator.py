@@ -254,8 +254,8 @@ def parse_args():
     parser.add_argument(
         "--playback-speed",
         type=float,
-        default=1.0,
-        help="Playback speed multiplier. Use 0.25 for quarter-speed slow motion.",
+        default=0.25,
+        help="Playback speed multiplier. Defaults to quarter-speed slow motion.",
     )
     parser.add_argument("--save", type=Path, help="Optional output path, for example actuator_animation.gif.")
     parser.add_argument("--no-show", action="store_true", help="Do not open an interactive Matplotlib window.")
